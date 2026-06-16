@@ -73,7 +73,7 @@ runs:
         build-args: |
           DPM_VERSION=${{ inputs.dpm-version }}
         cache-from: |
-          type=registry,ref=${{ inputs.registry }}/${{ inputs.namespace }}/${{ inputs.image }}:cache-${{ env.REF_NAME }}-${{ env.PLATFORM_PAIR }}
-          type=registry,ref=${{ inputs.registry }}/${{ inputs.namespace }}/${{ inputs.image }}:cache-main-${{ env.PLATFORM_PAIR }}
+          type=registry,ref=${{ inputs.registry }}/${{ inputs.namespace }}/${{ inputs.image }}:cache-${{ env.REF_NAME }}-${{ inputs.dpm-version }}-${{ env.PLATFORM_PAIR }}
+          type=registry,ref=${{ inputs.registry }}/${{ inputs.namespace }}/${{ inputs.image }}:cache-main-${{ inputs.dpm-version }}-${{ env.PLATFORM_PAIR }}
         cache-to: |
-          type=registry,ref=${{ inputs.registry }}/${{ inputs.namespace }}/${{ inputs.image }}:cache-${{ env.REF_NAME }}-${{ env.PLATFORM_PAIR }}
+          type=registry,ref=${{ inputs.registry }}/${{ inputs.namespace }}/${{ inputs.image }}:cache-${{ env.REF_NAME }}-${{ inputs.dpm-version }}-${{ env.PLATFORM_PAIR }}
