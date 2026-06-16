@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        dpm-version: ["3.4.11", "2.10.4"]
+        dpm-version: ["3.5.1", "3.4.11"]
 
     steps:
       - name: Checkout code
