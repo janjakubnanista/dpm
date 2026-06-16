@@ -23,6 +23,8 @@ RUN dpm version --active
 # Display available SDK versions
 RUN dpm version
 
+WORKDIR /app
+
 # dpm sandbox \
 # -C canton.participants.sandbox.ledger-api.address=0.0.0.0 \
 # -C canton.participants.sandbox.http-ledger-api.address=0.0.0.0
