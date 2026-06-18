@@ -12,7 +12,7 @@ ARG TEMURIN_VERSION=26.0.1_8-jdk-noble
 FROM eclipse-temurin:${TEMURIN_VERSION} AS base
 
 RUN apt-get update
-RUN apt-get install -y curl tree
+RUN apt-get install -y curl
 
 #   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-
 #  / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \
