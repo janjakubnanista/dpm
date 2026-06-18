@@ -1,0 +1,8 @@
+services:
+  dpm:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        DPM_VERSION: 3.5.1
+    command: ["sandbox"]
