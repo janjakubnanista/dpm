@@ -6,12 +6,13 @@ Based on `eclipse-temurin` image.
 
 ```sh
 # Default eclipse-temurin & bouncy castle versions
-docker build --tag <your tag> .
+docker build --tag <your tag> --build-arg DPM_VERSION=<dpm sdk version, e.g. 3.5.1> .
 
 # Custom eclipse-temurin & bouncy castle versions
 # 
 # See https://www.bouncycastle.org/download/bouncy-castle-java/#latest for available versions
 docker build --tag <your tag> \
+  --build-arg DPM_VERSION=<dpm sdk version, e.g. 3.5.1> \
   --build-arg TEMURIN_VERSION=<eclipse-temurin version, e.g. 26.0.1_8-jdk-noble> \
   --build-arg BOUNCYCASTLE_JDK=<bouncycastle jdk prefix, e.g. jdk18on> \
   --build-arg BOUNCYCASTLE_VERESION=<bouncycastle version, e.g. 1.84> .

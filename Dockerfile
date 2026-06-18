@@ -12,7 +12,7 @@ ARG TEMURIN_VERSION=26.0.1_8-jdk-noble
 FROM eclipse-temurin:${TEMURIN_VERSION} AS base
 
 RUN apt-get update
-RUN apt-get install -y curl
+RUN apt-get install -y curl tree
 
 #   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-
 #  / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \
@@ -55,6 +55,9 @@ RUN mkdir -p ${DPM_TEMPDIR}
 RUN tar xzf ${DPM_TEMPARCHIVE} -C ${DPM_TEMPDIR} --strip-components=1
 
 RUN ${DPM_TEMPDIR}/bin/dpm bootstrap ${DPM_TEMPDIR}
+
+# Get rid of the image cache
+RUN rm -rf /root/.dpm/cache/oci-layout
 
 #   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-
 #  / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \ \ / / \
