@@ -14,7 +14,6 @@ inputs:
   namespace:
     description: "Docker image namespace"
     required: true
-    default: janjakubnanista
   username:
     description: "Docker registry username"
     required: true

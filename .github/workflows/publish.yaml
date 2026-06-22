@@ -28,7 +28,7 @@ jobs:
           image: dpm
           platform: linux/amd64,linux/arm64
           registry: ghcr.io
-          namespace: janjakubnanista
+          namespace: tkhq
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
           dpm-version: ${{ matrix.dpm-version }}
